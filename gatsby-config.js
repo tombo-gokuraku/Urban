@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `gatsby-starter-emotion-tailwind`,
-    description: `Gatsby starter for using Emotion and tailwind. Linting with ESLint and stylelint.`,
+    title: `Urban`,
+    description: `Urban test`,
     author: `@tombo-gokuraku`,
   },
   plugins: [
