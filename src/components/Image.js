@@ -6,8 +6,6 @@ import Img from "gatsby-image"
 import tw, { css } from "twin.macro"
 
 const Image = ({ fluid, alt }) => {
-  console.log(fluid)
-  console.log(alt)
   return (
     <div
       css={[
