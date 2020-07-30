@@ -10,6 +10,7 @@ import H1 from "../components/H1"
 import H2 from "../components/H2"
 import H3 from "../components/H3"
 import P from "../components/P"
+import Button from "../components/Button"
 
 const IndexPage = () => {
   return (
@@ -37,6 +38,8 @@ const IndexPage = () => {
         Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui,
         non aliquet erat nibh non ex.
       </P>
+      <Button>Learn More</Button>
+      <Button reverse>Learn More</Button>
     </Layout>
   )
 }
