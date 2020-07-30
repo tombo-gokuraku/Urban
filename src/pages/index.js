@@ -2,6 +2,8 @@
 import { jsx } from "@emotion/core"
 import "twin.macro"
 
+import { useStaticQuery, graphql } from "gatsby"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -11,8 +13,20 @@ import H2 from "../components/H2"
 import H3 from "../components/H3"
 import P from "../components/P"
 import Button from "../components/Button"
+import Image from "../components/Image"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "pic01.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <SEO title="Home" />
@@ -40,6 +54,9 @@ const IndexPage = () => {
       </P>
       <Button>Learn More</Button>
       <Button reverse>Learn More</Button>
+      <div tw="w-1/3">
+        <Image fluid={data.file.childImageSharp.fluid} alt="hoge" />
+      </div>
     </Layout>
   )
 }
