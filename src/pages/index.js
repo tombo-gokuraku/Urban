@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
+import "twin.macro"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +14,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero>
+      <Hero tw="text-center">
         <H1>This is Urban</H1>
       </Hero>
       <H2>Aliquam ipsum purus dolor</H2>
