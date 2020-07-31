@@ -14,6 +14,7 @@ import H3 from "../components/H3"
 import P from "../components/P"
 import Button from "../components/Button"
 import Image from "../components/Image"
+import SocialLinks from "../components/SocialLinks"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -57,6 +58,7 @@ const IndexPage = () => {
       <div tw="w-1/3">
         <Image fluid={data.file.childImageSharp.fluid} alt="hoge" />
       </div>
+      <SocialLinks />
     </Layout>
   )
 }
