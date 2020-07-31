@@ -14,13 +14,21 @@ import H3 from "../components/H3"
 import P from "../components/P"
 import Button from "../components/Button"
 import Image from "../components/Image"
+import BackgroundImage from "../components/BackgroundImage"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "pic01.jpg" }) {
+      pic01: file(relativePath: { eq: "pic01.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      banner: file(relativePath: { eq: "banner.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -30,14 +38,22 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero>
-        <H1>This is Urban</H1>
-        <P>
-          Aliquam libero augue varius non odio nec faucibus congue felis quisque
-          a diam rutrum tempus massa accumsan faucibus purus.
-        </P>
-        <Button>Learn More</Button>
-      </Hero>
+      <BackgroundImage
+        fluid={data.banner.childImageSharp.fluid}
+        parentStyle={{
+          position: "relative",
+          backgroundColor: "rgba(0,0,0,0.65)",
+        }}
+      >
+        <Hero>
+          <H1>This is Urban</H1>
+          <P tw="text-gray-400">
+            Aliquam libero augue varius non odio nec faucibus congue <br />
+            felis quisque a diam rutrum tempus massa accumsan faucibus purus.
+          </P>
+          <Button>Learn More</Button>
+        </Hero>
+      </BackgroundImage>
       <H2>Aliquam ipsum purus dolor</H2>
       <H3>Maecenas a gravida quam</H3>
       <H3 reverse>Suspendisse quis massa vel justo</H3>
@@ -60,7 +76,7 @@ const IndexPage = () => {
       <Button>Learn More</Button>
       <Button reverse>Learn More</Button>
       <div tw="w-1/3">
-        <Image fluid={data.file.childImageSharp.fluid} alt="hoge" />
+        <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
       </div>
     </Layout>
   )

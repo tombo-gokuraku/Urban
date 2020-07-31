@@ -6,7 +6,7 @@ const Hero = tw.div`
   justify-center
   items-center
   content-center
-  bg-black
+  bg-transparent
   h-screen
   text-center
 `
