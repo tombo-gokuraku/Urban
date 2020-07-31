@@ -1,6 +1,6 @@
 import tw from "twin.macro"
 
-const Hero = tw.div`
+const Hero = tw.section`
   flex
   flex-col
   justify-center
@@ -9,6 +9,9 @@ const Hero = tw.div`
   bg-transparent
   h-screen
   text-center
+  px-6
+  pt-32
+  pb-16
 `
 
 export default Hero
