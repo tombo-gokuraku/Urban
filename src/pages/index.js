@@ -30,8 +30,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero tw="text-center">
+      <Hero>
         <H1>This is Urban</H1>
+        <P>
+          Aliquam libero augue varius non odio nec faucibus congue felis quisque
+          a diam rutrum tempus massa accumsan faucibus purus.
+        </P>
+        <Button>Learn More</Button>
       </Hero>
       <H2>Aliquam ipsum purus dolor</H2>
       <H3>Maecenas a gravida quam</H3>
