@@ -15,7 +15,7 @@ const Image = ({ fluid, alt }) => {
         `,
       ]}
     >
-      <Img tw="w-full rounded-full" fluid={fluid} alt={alt} />
+      <Img tw="rounded-full" fluid={fluid} alt={alt} />
     </div>
   )
 }

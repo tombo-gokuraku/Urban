@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import "twin.macro"
+import tw, { css } from "twin.macro"
 
 import { useStaticQuery, graphql } from "gatsby"
+
+import { mq } from "../styles/breaks"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -15,6 +17,9 @@ import P from "../components/P"
 import Button from "../components/Button"
 import Image from "../components/Image"
 import BackgroundImage from "../components/BackgroundImage"
+import Section from "../components/Section"
+import SectionImageContainer from "../components/SectionImageContainer"
+import SectionDescriptionContainer from "../components/SectionDescriptionContainer"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -47,24 +52,39 @@ const IndexPage = () => {
       >
         <Hero>
           <H1>This is Urban</H1>
-          <P tw="text-gray-400">
+          <p tw="mb-6 text-base text-gray-400 xl:text-2xl md:text-xl">
             Aliquam libero augue varius non odio nec faucibus congue <br />
             felis quisque a diam rutrum tempus massa accumsan faucibus purus.
-          </P>
+          </p>
           <Button>Learn More</Button>
         </Hero>
       </BackgroundImage>
+      <Section>
+        <SectionImageContainer>
+          <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
+        </SectionImageContainer>
+        <SectionDescriptionContainer>
+          <H3>Maecenas a gravida quam</H3>
+          <P>
+            Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
+            nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
+            sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex
+            blandit augue. Ut vitae neque fermentum, luctus elit fermentum,
+            porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc
+            justo dictum dui, non aliquet erat nibh non ex.
+          </P>
+          <P>
+            Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
+            consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor
+            lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
+            fermentum, porta augue. Nullam ultricies, turpis at fermentum
+            iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+          </P>
+          <Button>Learn More</Button>
+        </SectionDescriptionContainer>
+      </Section>
       <H2>Aliquam ipsum purus dolor</H2>
-      <H3>Maecenas a gravida quam</H3>
       <H3 reverse>Suspendisse quis massa vel justo</H3>
-      <P>
-        Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
-        nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
-        sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit
-        augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue.
-        Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui,
-        non aliquet erat nibh non ex.
-      </P>
       <P reverse>
         Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
         nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
@@ -75,9 +95,6 @@ const IndexPage = () => {
       </P>
       <Button>Learn More</Button>
       <Button reverse>Learn More</Button>
-      <div tw="w-1/3">
-        <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
-      </div>
     </Layout>
   )
 }
