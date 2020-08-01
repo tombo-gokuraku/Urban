@@ -21,12 +21,19 @@ import Section from "../components/Section"
 import SectionContainer from "../components/SectionContainer"
 import SectionImageContainer from "../components/SectionImageContainer"
 import SectionDescriptionContainer from "../components/SectionDescriptionContainer"
-import Card from "../components/Card"
+import Cards from "../components/Cards"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       pic01: file(relativePath: { eq: "pic01.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      pic02: file(relativePath: { eq: "pic02.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid_withWebp
@@ -91,7 +98,7 @@ const IndexPage = () => {
       <Section reverse>
         <SectionContainer reverse>
           <SectionImageContainer>
-            <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
+            <Image fluid={data.pic02.childImageSharp.fluid} alt="hoge" />
           </SectionImageContainer>
           <SectionDescriptionContainer>
             <H3 reverse>Maecenas a gravida quam</H3>
@@ -124,26 +131,7 @@ const IndexPage = () => {
             tincidunt
           </P>
         </div>
-        <div tw="flex flex-wrap md:flex-no-wrap justify-between items-stretch">
-          <Card image={data.pic01.childImageSharp.fluid}>
-            <P>
-              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
-              Aliquam consequat, nunc quis sollicitudin aliquet.
-            </P>
-          </Card>
-          <Card image={data.pic01.childImageSharp.fluid}>
-            <P>
-              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
-              Aliquam consequat, nunc quis sollicitudin aliquet.
-            </P>
-          </Card>
-          <Card image={data.pic01.childImageSharp.fluid}>
-            <P>
-              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
-              Aliquam consequat, nunc quis sollicitudin aliquet.
-            </P>
-          </Card>
-        </div>
+        <Cards />
       </Section>
     </Layout>
   )
