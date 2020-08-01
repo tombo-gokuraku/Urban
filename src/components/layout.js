@@ -7,16 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Footer from "../components/Footer"
-
 import "twin.macro"
+import "typeface-scope-one"
+
+import Footer from "../components/Footer"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div tw="font-sans">
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   )
 }
 
