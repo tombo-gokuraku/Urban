@@ -83,7 +83,32 @@ const IndexPage = () => {
           <Button>Learn More</Button>
         </SectionDescriptionContainer>
       </Section>
+      <Section reverse>
+        <SectionImageContainer>
+          <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
+        </SectionImageContainer>
+        <SectionDescriptionContainer>
+          <H3 reverse>Maecenas a gravida quam</H3>
+          <P reverse>
+            Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
+            nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
+            sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex
+            blandit augue. Ut vitae neque fermentum, luctus elit fermentum,
+            porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc
+            justo dictum dui, non aliquet erat nibh non ex.
+          </P>
+          <P reverse>
+            Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
+            consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor
+            lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
+            fermentum, porta augue. Nullam ultricies, turpis at fermentum
+            iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+          </P>
+          <Button reverse>Learn More</Button>
+        </SectionDescriptionContainer>
+      </Section>
       <H2>Aliquam ipsum purus dolor</H2>
+
       <H3 reverse>Suspendisse quis massa vel justo</H3>
       <P reverse>
         Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
