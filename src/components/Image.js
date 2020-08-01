@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 import tw, { css } from "twin.macro"
 
-const Image = ({ fluid, alt }) => {
+const Image = ({ fluid, alt, reverse }) => {
   return (
     <div
       css={[
@@ -13,6 +13,11 @@ const Image = ({ fluid, alt }) => {
         css`
           box-shadow: 0px 0px 0px 7px #fff, 0px 0px 0px 8px rgba(0, 0, 0, 0.1);
         `,
+        reverse &&
+          css`
+            box-shadow: 0px 0px 0px 7px #4299e1,
+              0px 0px 0px 8px rgba(255, 255, 255, 0.25);
+          `,
       ]}
     >
       <Img tw="rounded-full" fluid={fluid} alt={alt} />
@@ -23,6 +28,7 @@ const Image = ({ fluid, alt }) => {
 Image.propTypes = {
   fluid: PropTypes.object.isRequired,
   alt: PropTypes.string,
+  reverse: PropTypes.bool,
 }
 
 export default Image

@@ -98,7 +98,11 @@ const IndexPage = () => {
       <Section reverse>
         <SectionContainer reverse>
           <SectionImageContainer>
-            <Image fluid={data.pic02.childImageSharp.fluid} alt="hoge" />
+            <Image
+              fluid={data.pic02.childImageSharp.fluid}
+              alt="hoge"
+              reverse
+            />
           </SectionImageContainer>
           <SectionDescriptionContainer>
             <H3 reverse>Maecenas a gravida quam</H3>
