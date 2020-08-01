@@ -21,6 +21,7 @@ import Section from "../components/Section"
 import SectionContainer from "../components/SectionContainer"
 import SectionImageContainer from "../components/SectionImageContainer"
 import SectionDescriptionContainer from "../components/SectionDescriptionContainer"
+import Card from "../components/Card"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -122,6 +123,26 @@ const IndexPage = () => {
             Cras sagittis turpis sit amet est tempus, sit amet consectetur purus
             tincidunt
           </P>
+        </div>
+        <div tw="flex flex-wrap md:flex-no-wrap justify-between items-stretch">
+          <Card image={data.pic01.childImageSharp.fluid}>
+            <P>
+              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
+              Aliquam consequat, nunc quis sollicitudin aliquet.
+            </P>
+          </Card>
+          <Card image={data.pic01.childImageSharp.fluid}>
+            <P>
+              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
+              Aliquam consequat, nunc quis sollicitudin aliquet.
+            </P>
+          </Card>
+          <Card image={data.pic01.childImageSharp.fluid}>
+            <P>
+              Sed congue elit malesuada nibh, a varius odio vehicula aliquet.
+              Aliquam consequat, nunc quis sollicitudin aliquet.
+            </P>
+          </Card>
         </div>
       </Section>
     </Layout>
