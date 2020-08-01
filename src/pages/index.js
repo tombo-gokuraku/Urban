@@ -18,6 +18,7 @@ import Button from "../components/Button"
 import Image from "../components/Image"
 import BackgroundImage from "../components/BackgroundImage"
 import Section from "../components/Section"
+import SectionContainer from "../components/SectionContainer"
 import SectionImageContainer from "../components/SectionImageContainer"
 import SectionDescriptionContainer from "../components/SectionDescriptionContainer"
 
@@ -60,66 +61,69 @@ const IndexPage = () => {
         </Hero>
       </BackgroundImage>
       <Section>
-        <SectionImageContainer>
-          <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
-        </SectionImageContainer>
-        <SectionDescriptionContainer>
-          <H3>Maecenas a gravida quam</H3>
-          <P>
-            Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
-            nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
-            sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex
-            blandit augue. Ut vitae neque fermentum, luctus elit fermentum,
-            porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc
-            justo dictum dui, non aliquet erat nibh non ex.
-          </P>
-          <P>
-            Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
-            consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor
-            lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
-            fermentum, porta augue. Nullam ultricies, turpis at fermentum
-            iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
-          </P>
-          <Button>Learn More</Button>
-        </SectionDescriptionContainer>
+        <SectionContainer>
+          <SectionImageContainer>
+            <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
+          </SectionImageContainer>
+          <SectionDescriptionContainer>
+            <H3>Maecenas a gravida quam</H3>
+            <P>
+              Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue
+              malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat,
+              nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia
+              nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
+              fermentum, porta augue. Nullam ultricies, turpis at fermentum
+              iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+            </P>
+            <P>
+              Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
+              consequat, nunc quis sollicitudin aliquet, enim magna cursus
+              auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum,
+              luctus elit fermentum, porta augue. Nullam ultricies, turpis at
+              fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh
+              non ex.
+            </P>
+            <Button>Learn More</Button>
+          </SectionDescriptionContainer>
+        </SectionContainer>
       </Section>
       <Section reverse>
-        <SectionImageContainer>
-          <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
-        </SectionImageContainer>
-        <SectionDescriptionContainer>
-          <H3 reverse>Maecenas a gravida quam</H3>
-          <P reverse>
-            Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
-            nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
-            sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex
-            blandit augue. Ut vitae neque fermentum, luctus elit fermentum,
-            porta augue. Nullam ultricies, turpis at fermentum iaculis, nunc
-            justo dictum dui, non aliquet erat nibh non ex.
-          </P>
-          <P reverse>
-            Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
-            consequat, nunc quis sollicitudin aliquet, enim magna cursus auctor
-            lacinia nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
-            fermentum, porta augue. Nullam ultricies, turpis at fermentum
-            iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
-          </P>
-          <Button reverse>Learn More</Button>
-        </SectionDescriptionContainer>
+        <SectionContainer reverse>
+          <SectionImageContainer>
+            <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
+          </SectionImageContainer>
+          <SectionDescriptionContainer>
+            <H3 reverse>Maecenas a gravida quam</H3>
+            <P reverse>
+              Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue
+              malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat,
+              nunc quis sollicitudin aliquet, enim magna cursus auctor lacinia
+              nunc ex blandit augue. Ut vitae neque fermentum, luctus elit
+              fermentum, porta augue. Nullam ultricies, turpis at fermentum
+              iaculis, nunc justo dictum dui, non aliquet erat nibh non ex.
+            </P>
+            <P reverse>
+              Sed congue malesuada nibh, a varius odio vehicula aliquet. Aliquam
+              consequat, nunc quis sollicitudin aliquet, enim magna cursus
+              auctor lacinia nunc ex blandit augue. Ut vitae neque fermentum,
+              luctus elit fermentum, porta augue. Nullam ultricies, turpis at
+              fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh
+              non ex.
+            </P>
+            <Button reverse>Learn More</Button>
+          </SectionDescriptionContainer>
+        </SectionContainer>
       </Section>
-      <H2>Aliquam ipsum purus dolor</H2>
 
-      <H3 reverse>Suspendisse quis massa vel justo</H3>
-      <P reverse>
-        Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue malesuada
-        nibh, a varius odio vehicula aliquet. Aliquam consequat, nunc quis
-        sollicitudin aliquet, enim magna cursus auctor lacinia nunc ex blandit
-        augue. Ut vitae neque fermentum, luctus elit fermentum, porta augue.
-        Nullam ultricies, turpis at fermentum iaculis, nunc justo dictum dui,
-        non aliquet erat nibh non ex.
-      </P>
-      <Button>Learn More</Button>
-      <Button reverse>Learn More</Button>
+      <Section>
+        <div tw="text-center">
+          <H2>Aliquam ipsum purus dolor</H2>
+          <P>
+            Cras sagittis turpis sit amet est tempus, sit amet consectetur purus
+            tincidunt
+          </P>
+        </div>
+      </Section>
     </Layout>
   )
 }
