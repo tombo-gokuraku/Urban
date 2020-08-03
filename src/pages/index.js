@@ -1,10 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
-import tw, { css } from "twin.macro"
-
+import "twin.macro"
 import { useStaticQuery, graphql } from "gatsby"
-
-import { mq } from "../styles/breaks"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +9,6 @@ import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import H1 from "../components/H1"
 import H2 from "../components/H2"
-import H3 from "../components/H3"
 import P from "../components/P"
 import Button from "../components/Button"
 import Image from "../components/Image"
@@ -74,7 +70,7 @@ const IndexPage = () => {
             <Image fluid={data.pic01.childImageSharp.fluid} alt="hoge" />
           </SectionImageContainer>
           <SectionDescriptionContainer>
-            <H3>Maecenas a gravida quam</H3>
+            <H2>Maecenas a gravida quam</H2>
             <P>
               Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue
               malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat,
@@ -105,7 +101,7 @@ const IndexPage = () => {
             />
           </SectionImageContainer>
           <SectionDescriptionContainer>
-            <H3 reverse>Maecenas a gravida quam</H3>
+            <H2 reverse>Maecenas a gravida quam</H2>
             <P reverse>
               Etiam posuere hendrerit arcu, ac blandit nulla. Sed congue
               malesuada nibh, a varius odio vehicula aliquet. Aliquam consequat,

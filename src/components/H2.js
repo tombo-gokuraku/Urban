@@ -1,5 +1,8 @@
-import tw from "twin.macro"
+import tw, { styled } from "twin.macro"
 
-const H2 = tw.h2`text-black xl:text-4xl md:text-3xl text-2xl mb-4 font-bold`
+const H2 = styled.h2(({ reverse }) => [
+  tw`mb-4 text-2xl font-bold text-black xl:text-4xl md:text-3xl`,
+  reverse && tw`text-white`,
+])
 
 export default H2
