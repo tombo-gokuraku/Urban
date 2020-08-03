@@ -55,13 +55,13 @@ const IndexPage = () => {
           backgroundColor: "rgba(0,0,0,0.65)",
         }}
       >
-        <Hero>
+        <Hero id={"top"}>
           <H1>This is Urban</H1>
           <p tw="mb-6 text-base text-gray-400 xl:text-2xl md:text-xl">
             Aliquam libero augue varius non odio nec faucibus congue <br />
             felis quisque a diam rutrum tempus massa accumsan faucibus purus.
           </p>
-          <Button>Learn More</Button>
+          <Button href={"#top"}>Learn More</Button>
         </Hero>
       </BackgroundImage>
       <Section>
@@ -87,7 +87,7 @@ const IndexPage = () => {
               fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh
               non ex.
             </P>
-            <Button>Learn More</Button>
+            <Button href={"#top"}>Learn More</Button>
           </SectionDescriptionContainer>
         </SectionContainer>
       </Section>
@@ -118,7 +118,9 @@ const IndexPage = () => {
               fermentum iaculis, nunc justo dictum dui, non aliquet erat nibh
               non ex.
             </P>
-            <Button reverse>Learn More</Button>
+            <Button reverse href={"#top"}>
+              Learn More
+            </Button>
           </SectionDescriptionContainer>
         </SectionContainer>
       </Section>

@@ -12,7 +12,7 @@ function Card({ image, children }) {
         <Image fluid={image} />
       </div>
       {children}
-      <Button>Learn More</Button>
+      <Button href={"#top"}>Learn More</Button>
     </div>
   )
 }
