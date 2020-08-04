@@ -39,5 +39,6 @@ module.exports = {
         analyzerPort: "4000",
       },
     },
+    "gatsby-plugin-preact",
   ],
 }
