@@ -51,7 +51,7 @@ function Cards() {
     },
   ]
   return (
-    <div tw="flex flex-wrap md:flex-no-wrap justify-between items-stretch">
+    <div tw="flex flex-wrap md:flex-no-wrap justify-between items-stretch mt-8">
       {cardData.map((card, index) => {
         return (
           <Card image={card.image} key={index}>

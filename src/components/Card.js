@@ -7,7 +7,7 @@ import "twin.macro"
 
 function Card({ image, children }) {
   return (
-    <div tw="flex flex-col justify-center items-center mb-6 md:mx-2">
+    <div tw="flex flex-col justify-center items-center mb-10 md:mx-2">
       <div tw="w-7/12 mb-4">
         <Image fluid={image} />
       </div>
