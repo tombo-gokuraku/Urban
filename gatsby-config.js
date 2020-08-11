@@ -41,5 +41,16 @@ module.exports = {
       },
     },
     "gatsby-plugin-preact",
+    {
+      resolve: "gatsby-plugin-bundle-stats",
+      options: {
+        compare: true,
+        html: true,
+        outDir: "../logs",
+        stats: {
+          content: "./src",
+        },
+      },
+    },
   ],
 }
