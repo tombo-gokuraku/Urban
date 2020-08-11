@@ -77,5 +77,14 @@
       "hasSuggestions": true,
       "debug": false
     }
+  },
+  "browserslist": {
+    "development": [
+      "last 1 version"
+    ],
+    "production": [
+      "> 0.1%",
+      "not dead"
+    ]
   }
 }
